@@ -11,7 +11,7 @@ export default function Main() {
           Branding Storytelling & Copywriter
         </h1>
 
-        <span className="inline-block text-5xl font-bold my-5">
+        <span className="inline-block text-5xl font-bold my-5 leading-15">
           Tijani Akorede Salaudeen
         </span>
       </section>
