@@ -2,7 +2,7 @@ import Navbar from "./features/Navbar/components/Navbar";
 
 function App() {
   return (
-    <div className="" style={{backgroundImage: "url('')"}}>
+    <div className="">
       <Navbar />
     </div>
   );
