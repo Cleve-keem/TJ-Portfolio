@@ -4,9 +4,9 @@ import {
   MdOutlineBusinessCenter,
   MdOutlineWorkspacePremium,
 } from "react-icons/md";
-import { FaLink } from "react-icons/fa";
 import { SlFire } from "react-icons/sl";
 import { useState } from "react";
+import { IoIosLink } from "react-icons/io";
 
 const navItems = [
   { id: 1, name: "Home", href: "#home", icon: <PiUser /> },
@@ -18,7 +18,7 @@ const navItems = [
     icon: <MdOutlineWorkspacePremium />,
   },
   { id: 4, name: "Skills", href: "#skills", icon: <SlFire /> },
-  { id: 5, name: "Links", href: "#link", icon: <FaLink /> },
+  { id: 5, name: "Links", href: "#link", icon: <IoIosLink /> },
 ];
 
 export default function Navbar() {
