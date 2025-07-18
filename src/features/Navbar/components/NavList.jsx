@@ -3,7 +3,7 @@ export default function NavList({ icon, label }) {
     <li className="flex-1">
       <a
         href="#home"
-        className="flex items-center justify-center gap-1 py-4 rounded-4xl text-white text-[14px]"
+        className="flex items-center justify-center gap-1 py-4 rounded-full text-white text-[14px]"
       >
         <div className="text-2xl md:text-inherit">{icon}</div>
         <span className="hidden md:block">{label}</span>
