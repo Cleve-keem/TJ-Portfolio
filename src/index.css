@@ -6,20 +6,16 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
+/* body {
   background-image: url("/bg-image.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* height: 100vh; */
-}
+} */
 
 .active {
   background-color: #fff;
   color: #000;
 }
 
-/* .section {
-  padding: 2rem 5rem;
-} */
