@@ -1,10 +1,15 @@
+import { NavLink } from "react-router-dom";
+
 export default function NavList({ icon, label }) {
   return (
-    <li className="flex-1 rounded-4xl p-2">
-      <a href="#home" className="flex items-center justify-center gap-1 h-full">
-        <div className="size-5">{icon}</div>
+    <li className="flex-1">
+      <NavLink
+        to="#home"
+        className="flex items-center justify-center gap-1 p-2 rounded-4xl"
+      >
+        <div className="text-xl">{icon}</div>
         <span>{label}</span>
-      </a>
+      </NavLink>
     </li>
   );
 }
