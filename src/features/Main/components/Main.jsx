@@ -1,13 +1,13 @@
 export default function Main() {
   return (
-    <main className="p-7 text-white">
+    <main className="p-7 text-white" id="home">
       {/* Background layer */}
       <div
         className="fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-top bg-no-repeat -z-10"
         aria-hidden="true"
       />
 
-      <section className="flex flex-col h-screen" id="home">
+      <section className="flex flex-col h-screen">
         <div className="flex items-center gap-2">
           <span className="block size-2 bg-green-500 rounded-full"></span>
           <p className="font-semibold">Open to work</p>
