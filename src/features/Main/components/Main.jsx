@@ -7,7 +7,7 @@ export default function Main() {
       </div>
 
       <section className="my-auto">
-        <h1 className="uppercase text-xl text-amber-400 font-semibold md:text-3xl italic">
+        <h1 className="uppercase text-[16px] text-amber-400 font-semibold md:text-3xl italic">
           Branding Storytelling & Copywriter
         </h1>
 
