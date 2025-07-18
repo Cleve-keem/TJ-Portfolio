@@ -1,5 +1,6 @@
-import Button from "./components/Button";
+import Button from "./ui/Button";
 import Navbar from "./features/Navbar/components/Navbar";
+import Main from "./features/Main/components/Main";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         Download CV
       </Button>
       <Navbar />
+      <Main />
     </div>
   );
 }
