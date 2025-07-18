@@ -31,6 +31,7 @@ export default function Navbar() {
             key={item.id}
             id={item.id}
             icon={item.icon}
+            href={item.href}
             label={item.name}
             activeLink={activeLink}
             setActiveLink={setActiveLink}

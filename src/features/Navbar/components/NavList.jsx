@@ -1,6 +1,7 @@
 export default function NavList({
   icon,
   label,
+  href,
   id,
   activeLink,
   setActiveLink,
@@ -13,7 +14,7 @@ export default function NavList({
     <li className="flex-1">
       <a
         onClick={() => handleNextLink(id)}
-        href="#home"
+        href={href}
         className={`flex items-center justify-center gap-1 py-4 rounded-full text-white text-[14px] ${
           activeLink === id ? "active" : ""
         } transition-all duration-500 ease-in-out`}
