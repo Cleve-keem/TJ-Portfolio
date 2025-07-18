@@ -3,7 +3,7 @@ export default function Main() {
     <main className="p-7 text-white" id="home">
       {/* Background layer */}
       <div
-        className="fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-top bg-no-repeat -z-10"
+        className="fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-top bg-no-repeat -z-10 transition-all duration-500 ease-in-out"
         aria-hidden="true"
       />
 
