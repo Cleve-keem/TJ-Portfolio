@@ -1,15 +1,13 @@
-import { NavLink } from "react-router-dom";
-
 export default function NavList({ icon, label }) {
   return (
     <li className="flex-1">
-      <NavLink
-        to="#home"
-        className="flex items-center justify-center gap-1 p-2 rounded-4xl"
+      <a
+        href="#home"
+        className="flex items-center justify-center gap-1 py-4 rounded-4xl text-white text-[14px]"
       >
-        <div className="text-xl">{icon}</div>
+        <div className="text-inherit">{icon}</div>
         <span>{label}</span>
-      </NavLink>
+      </a>
     </li>
   );
 }

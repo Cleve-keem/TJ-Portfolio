@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+body{
+    background-image: url('./bg-image.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 .active{
     background-color: #fff;
     color: #000;
