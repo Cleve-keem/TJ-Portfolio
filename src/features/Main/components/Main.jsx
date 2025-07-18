@@ -7,7 +7,7 @@ export default function Main() {
         aria-hidden="true"
       />
 
-      <section className="flex flex-col h-screen">
+      <section className="flex flex-col h-dvh">
         <div className="flex items-center gap-2">
           <span className="block size-2 bg-green-500 rounded-full"></span>
           <p className="font-semibold">Open to work</p>
