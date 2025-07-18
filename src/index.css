@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 body{
-    background-image: url('./bg-image.jpg');
+    background-image: url('bg-image.jpg');
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .active{
