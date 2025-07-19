@@ -14,7 +14,7 @@ export default function Main() {
     <main className="p-7 text-white relative" id="home">
       {/* Background layer */}
       <div
-        className={`fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-100 md:bg-top ${
+        className={`fixed -inset-10 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-100 md:bg-top ${
           isBlurred ? "blur-md" : ""
         }`}
         aria-hidden="true"
