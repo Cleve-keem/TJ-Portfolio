@@ -16,13 +16,9 @@ h1 {
   font-weight: 600;
 }
 
-/* body {
-  background-image: url("/bg-image.jpg");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} */
+body {
+  margin: 0;
+}
 
 .active {
   background-color: #fff;

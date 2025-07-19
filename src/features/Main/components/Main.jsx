@@ -4,18 +4,18 @@ import { useEffect, useRef, useState } from "react";
 export default function Main() {
   const [isBlurred, setIsBlurred] = useState(false);
   const aboutRef = useRef(null);
-  const isInView = useInView(aboutRef, { margin: "-70px 0px -50% 0px" });
+  const isInView = useInView(aboutRef, { margin: "-100px 0px -50% 0px" });
 
   useEffect(() => {
     setIsBlurred(isInView);
   }, [isInView]);
 
   return (
-    <main className="p-7 text-white" id="home">
+    <main className="p-7 text-white relative" id="home">
       {/* Background layer */}
       <div
-        className={`fixed -inset-4 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-300 ease-in-out md:bg-top ${
-          isBlurred ? "blur-sm" : ""
+        className={`fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-100 md:bg-top ${
+          isBlurred ? "blur-md" : ""
         }`}
         aria-hidden="true"
       />
