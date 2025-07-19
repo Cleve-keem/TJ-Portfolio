@@ -4,6 +4,8 @@ import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { IoCallOutline } from "react-icons/io5";
 import { PiMapPinAreaThin } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
+import ScrollToView from "../../../ui/ScrollToView";
+import { motion } from "framer-motion";
 
 const socials = [
   {
@@ -48,7 +50,7 @@ export default function Main() {
   }, [isInView]);
 
   return (
-    <main className="p-7 text-white relative" id="home">
+    <main className="p-7 text-white relative overflow-x-hidden" id="home">
       {/* Background layer */}
       <div
         className={`fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-100 md:bg-top
@@ -70,43 +72,75 @@ export default function Main() {
           <p className="font-semibold">Open to work</p>
         </div>
 
-        <section className="my-auto">
+        <motion.section
+          className="my-auto"
+          variants={{
+            hidden: { opacity: 0, x: "-100vw" },
+            visible: { opacity: 1, x: "0" },
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            duration: 1,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 150,
+            when: "beforeChildren",
+          }}
+        >
           <h1 className="text-[16px] uppercase text-amber-400 md:text-xl italic">
             Branding Storyteller & Copywriter
           </h1>
 
-          <span className="inline-block text-5xl font-bold my-5 leading-15">
+          <motion.span
+            className="inline-block text-5xl font-bold my-5 leading-15"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
+            transition={{ duration: 2, delay: 0.2 }}
+          >
             Tijani Akorede Salaudeen
-          </span>
-        </section>
+          </motion.span>
+        </motion.section>
       </section>
 
-      <section id="about" className="text-wrap" ref={aboutRef}>
+      <section className="text-wrap">
         <ul className="grid grid-cols-1 gap-5 mb-15">
           {socials.map((item, index) => (
-            <li className="flex items-center gap-3 text-[19px]" key={index}>
-              <span className="block text-amber-400 text-xl">
-                {item.icon}
-              </span>
-              <a
-                href="mailTo:tijanisalaudeen.a@gmail.com"
-                className="inline-block text-inherit"
-              >
-                {item.name}
-              </a>
-            </li>
+            <ScrollToView>
+              <li className="flex items-center gap-3 text-[19px]" key={index}>
+                <span className="block text-amber-400 text-xl">
+                  {item.icon}
+                </span>
+                <a
+                  href="mailTo:tijanisalaudeen.a@gmail.com"
+                  className="inline-block text-inherit"
+                >
+                  {item.name}
+                </a>
+              </li>
+            </ScrollToView>
           ))}
         </ul>
-        <h1 className="text-amber-400 text-4xl mb-5">About Me</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-          saepe quas facere necessitatibus, autem id temporibus minima magni
-          voluptates neque eius vero maiores. Hic, animi voluptates eaque
-          consectetur labore blanditiis? Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Quis natus quos perferendis eligendi labore magni
-          alias, aliquam minus sunt porro aliquid doloribus amet tempore?
-          Adipisci reiciendis id dignissimos accusantium facere.
-        </p>
+        <div id="about" ref={aboutRef}>
+          <ScrollToView>
+            <h1 className="text-amber-400 text-4xl mb-5">About Me</h1>
+          </ScrollToView>
+          <ScrollToView>
+            <p className="text-[18px] mb-5">
+              Brand Storytelling & Direct Response Copywriter | I help brands &
+              creators craft story-driven copy that stops the scroll and sparks
+              ‘I need this’ moments | Law Grad – My native tongue? Persuasion.
+            </p>
+            <p className="text-[18px] mb-5">
+              I am a copywriter and branding storyteller with a passion for
+              crafting compelling narratives that resonate with audiences. My
+              expertise lies in creating engaging content that not only informs
+              but also inspires action.
+            </p>
+          </ScrollToView>
+        </div>
       </section>
     </main>
   );
