@@ -1,9 +1,22 @@
+import { useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
 export default function Main() {
+  const [isBlurred, setIsBlurred] = useState(false);
+  const aboutRef = useRef(null);
+  const isInView = useInView(aboutRef, { margin: "-70px 0px -50% 0px" });
+
+  useEffect(() => {
+    setIsBlurred(isInView);
+  }, [isInView]);
+
   return (
     <main className="p-7 text-white" id="home">
       {/* Background layer */}
       <div
-        className="fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-500 ease-in-out md:bg-top"
+        className={`fixed -inset-4 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-300 ease-in-out md:bg-top ${
+          isBlurred ? "blur-sm" : ""
+        }`}
         aria-hidden="true"
       />
 
@@ -24,7 +37,7 @@ export default function Main() {
         </section>
       </section>
 
-      <section id="about" className="text-wrap">
+      <section id="about" className="text-wrap" ref={aboutRef}>
         <h1 className="text-amber-400 text-4xl mb-5">About Me</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
