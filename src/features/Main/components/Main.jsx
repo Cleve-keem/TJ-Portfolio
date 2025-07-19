@@ -22,7 +22,7 @@ export default function Main() {
       {/* Blur Overlay */}
       {isBlurred && (
         <div
-          className="fixed inset-1 -z-10 backdrop-blur-md transition-all duration-300"
+          className="fixed inset-0 -z-10 backdrop-blur-md transition-all duration-300"
           aria-hidden="true"
         ></div>
       )}
