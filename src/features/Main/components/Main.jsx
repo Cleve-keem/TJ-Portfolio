@@ -1,5 +1,42 @@
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { IoCallOutline } from "react-icons/io5";
+import { PiMapPinAreaThin } from "react-icons/pi";
+import { TfiEmail } from "react-icons/tfi";
+
+const socials = [
+  {
+    name: "tijanisalaudeen.a@gmail.com",
+    ref: "tijanisalaudeen.a@gmail.com",
+    icon: <TfiEmail />,
+  },
+  {
+    name: "glitteringtjay",
+    ref: "https://x.com/glitteringtjay?s=21",
+    icon: <FaXTwitter />,
+  },
+  {
+    name: "glittering_tee_jay",
+    ref: "https://x.com/glitteringtjay?s=21",
+    icon: <FaInstagram />,
+  },
+  {
+    name: "Tijani (Akorede) Salaudeen",
+    ref: "http://linkedin.com/in/tijani-copywriter-6bb7771ba",
+    icon: <FaLinkedin />,
+  },
+  {
+    name: "Lagos, Nigeria",
+    // ref: "http://linkedin.com/in/tijani-copywriter-6bb7771ba",
+    icon: <PiMapPinAreaThin />,
+  },
+  {
+    name: "+234-702-629-2264",
+    ref: "2347026292264",
+    icon: <IoCallOutline />,
+  },
+];
 
 export default function Main() {
   const [isBlurred, setIsBlurred] = useState(false);
@@ -45,6 +82,21 @@ export default function Main() {
       </section>
 
       <section id="about" className="text-wrap" ref={aboutRef}>
+        <ul className="grid grid-cols-1 gap-5 mb-15">
+          {socials.map((item, index) => (
+            <li className="flex items-center gap-3 text-[19px]" key={index}>
+              <span className="block text-amber-400 text-xl">
+                {item.icon}
+              </span>
+              <a
+                href="mailTo:tijanisalaudeen.a@gmail.com"
+                className="inline-block text-inherit"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
         <h1 className="text-amber-400 text-4xl mb-5">About Me</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
