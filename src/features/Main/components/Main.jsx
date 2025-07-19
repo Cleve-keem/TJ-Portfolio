@@ -35,7 +35,7 @@ export default function Main() {
 
         <section className="my-auto">
           <h1 className="text-[16px] uppercase text-amber-400 md:text-xl italic">
-            Branding Storytelling & Copywriter
+            Branding Storyteller & Copywriter
           </h1>
 
           <span className="inline-block text-5xl font-bold my-5 leading-15">
