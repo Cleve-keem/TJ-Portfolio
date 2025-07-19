@@ -3,7 +3,7 @@ export default function Main() {
     <main className="p-7 text-white" id="home">
       {/* Background layer */}
       <div
-        className="fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-500 ease-in-out"
+        className="fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-500 ease-in-out md:bg-top"
         aria-hidden="true"
       />
 
@@ -14,7 +14,7 @@ export default function Main() {
         </div>
 
         <section className="my-auto">
-          <h1 className="uppercase text-[16px] text-amber-400 font-semibold md:text-3xl italic">
+          <h1 className="text-[16px] uppercase text-amber-400 md:text-xl italic">
             Branding Storytelling & Copywriter
           </h1>
 
@@ -24,7 +24,8 @@ export default function Main() {
         </section>
       </section>
 
-      <section id="about" className="">
+      <section id="about" className="text-wrap">
+        <h1 className="text-amber-400 text-4xl mb-5">About Me</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
           saepe quas facere necessitatibus, autem id temporibus minima magni

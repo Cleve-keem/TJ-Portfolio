@@ -6,6 +6,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+@layer components {
+  /* h1 {
+    @apply;
+  } */
+}
+
+h1 {
+  font-weight: 600;
+}
+
 /* body {
   background-image: url("/bg-image.jpg");
   background-size: cover;
@@ -18,4 +28,3 @@
   background-color: #fff;
   color: #000;
 }
-
