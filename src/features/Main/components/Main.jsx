@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Main() {
   const [isBlurred, setIsBlurred] = useState(false);
   const aboutRef = useRef(null);
-  const isInView = useInView(aboutRef, { margin: "-100px 0px -50% 0px" });
+  const isInView = useInView(aboutRef, { margin: "-30px 0px -50% 0px" });
 
   useEffect(() => {
     setIsBlurred(isInView);
@@ -14,11 +14,18 @@ export default function Main() {
     <main className="p-7 text-white relative" id="home">
       {/* Background layer */}
       <div
-        className={`fixed -inset-10 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-100 md:bg-top ${
-          isBlurred ? "blur-md" : ""
+        className={`fixed inset-0 bg-[url('/bg-image.jpg')] bg-cover bg-center bg-no-repeat -z-10 transition-all duration-100 md:bg-top
         }`}
         aria-hidden="true"
       />
+
+      {/* Blur Overlay */}
+      {isBlurred && (
+        <div
+          className="fixed inset-1 -z-10 backdrop-blur-md transition-all duration-300"
+          aria-hidden="true"
+        ></div>
+      )}
 
       <section className="flex flex-col h-svh">
         <div className="flex items-center gap-2">
